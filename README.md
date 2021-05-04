@@ -46,7 +46,7 @@ First, we have to start up Django's development server.
 ```
 python manage.py runserver
 ```
-####Hence, the required urls are:
+#### Hence, the required urls are:
 - Create a new course:
     - ```http://127.0.0.1:8000/api/courses_create```
 - Get a list of courses:
@@ -54,7 +54,7 @@ python manage.py runserver
 - Get full information about course, update course attributes(all or partial) or delete a course:
     - ```http://127.0.0.1:8000/api/courses_list/<int:pk>```
 
-####For each course, the following field is required:
+#### For each course, the following field is required:
 - "title": _(name of course, text, max length: 100)_
 - "start_date": _(start date of course in format YYYY-MM-DD, date)_
 - "end_date": _(end date of course in format YYYY-MM-DD, date)_
