@@ -22,18 +22,3 @@ class CoursesList(generics.ListAPIView):
 class CoursesDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Courses.objects.all()
     serializer_class = CoursesSerializerDetail
-
-
-
-# class CoursesList(generics.ListAPIView):
-#     serializer_class = CoursesSerializerList
-#     def get_queryset(self):
-#         """
-#         Optionally restricts the returned purchases to a given user,
-#         by filtering against a `username` query parameter in the URL.
-#         """
-#         queryset = Courses.objects.all()
-#         title = self.request.query_params.get('title')
-#         if title is not None:
-#             queryset = queryset.filter(title=title)
-#         return queryset
