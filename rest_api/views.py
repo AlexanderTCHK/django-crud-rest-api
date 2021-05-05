@@ -18,7 +18,6 @@ class CoursesList(generics.ListAPIView):
     filter_backends = [DjangoFilterBackend]
     filterset_fields = ['title', 'start_date', 'end_date']
 
-
 class CoursesDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Courses.objects.all()
     serializer_class = CoursesSerializerDetail
